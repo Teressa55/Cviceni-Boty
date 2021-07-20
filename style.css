@@ -21,3 +21,126 @@ body {
 */
 
 /* ----- zde zacni psat vlastni css ----- */
+body {
+    background-color: #dbdbdb;
+}
+
+.zbozi{
+    margin: 2rem auto;
+    display:flex;
+    width: 670px;
+    height: 440px;
+    font-family: 'Rubik', sans-serif;
+}
+.vizual,
+.detaily{
+    flex-direction: column;
+    width: 50%;
+}
+.vizual{
+    background: linear-gradient(#06d7c1, #50cc49);
+    border-bottom-left-radius: 2.5%;
+    border-top-left-radius: 2.5% ;
+    position:relative;
+    color:white;
+}
+.detaily{
+    background-color: white;
+    border-bottom-right-radius: 2.5%;
+    border-top-right-radius: 2.5%;
+    position:relative;
+}
+
+.logo{
+    position: absolute;
+    top:30px;
+    left:30px;
+}
+.slogan{
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left:30px;
+    top:60px;
+}
+.bota{
+    position: absolute;
+    left:-80px;
+    bottom: -3px;
+}
+.cenovka{
+    position: absolute;
+    bottom: 30px;
+    right:30px;
+    
+}
+.cena{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: end;
+}
+.zaruka{
+    font-size: 12px;
+}
+.nazev{
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-transform: uppercase;
+}
+.produkt{
+    font-size: 14px;
+    color: #959595;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+.popis{
+    font-size: 14px;
+    width:80%;
+    position: relative;
+    top:110px;
+    left: 30px;
+}
+.parametr{
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    left: 30px;
+    top: 130px;
+    width: 80%;
+    border-top: 1px solid #06d7c1;
+    padding-top: 30px;
+}
+.velikosti{
+    width: 80%;
+    list-style-type: none;
+    position: relative;
+    top: 130px;
+    left: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+li{
+    padding: 3px;
+}
+li:hover{
+    color: #f15f42;
+    border: 1px solid #f15f42; border-radius: 50%; 
+}
+.akce{
+    position:absolute;
+    left: 30px;
+    bottom: 40px; 
+}
+a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f15f42;
+    border-radius: 5px;
+}
