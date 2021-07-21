@@ -189,3 +189,9 @@ a{
 
 /* padding se lze napsat do .zbozi nebo jin0 nad sekci 
 ne k jednotlivym prvkum
+
+/* lze i udelat caru v html: <hr class="cara">
+v CSS: .cara{ width:100%;
+                border:none;
+                height:2px;
+                background-color:x;
