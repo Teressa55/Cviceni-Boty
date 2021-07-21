@@ -28,14 +28,16 @@ body {
 .zbozi{
     margin: 2rem auto;
     display:flex;
-    width: 670px;
+    /* width: 670px; */
+    max-width: 670px;
     height: 440px;
     font-family: 'Rubik', sans-serif;
 }
 .vizual,
 .detaily{
     flex-direction: column;
-    width: 50%;
+    width: 50%; /* nebo flex-basis:50% ale muselo by
+    se zrusit flex-direction:column */
 }
 .vizual{
     background: linear-gradient(#06d7c1, #50cc49);
@@ -43,12 +45,20 @@ body {
     border-top-left-radius: 2.5% ;
     position:relative;
     color:white;
+    /* display:flex;
+    flex-direction: column;
+    + .slogan{flex-grow:1;} */
 }
 .detaily{
     background-color: white;
     border-bottom-right-radius: 2.5%;
     border-top-right-radius: 2.5%;
     position:relative;
+    /* display:flex;
+    flex-direction:column; 
+     .velikosti: flex-grow:1;
+                    align-content: flex-start;
+     */
 }
 
 .logo{
@@ -67,6 +77,8 @@ body {
     position: absolute;
     left:-80px;
     bottom: -3px;
+    /* nebo lze margin-left: -120px a
+     margin-bottom:xpx*/
 }
 .cenovka{
     position: absolute;
@@ -123,6 +135,27 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding-left: 0;
+    /* gap:20px; dovud proc nedat justify-content
+    kdyby bylo mene polozek tak by se to roztahlo
+    do stran ..... s gap musime mit flex-wrap, aby 
+    pokud se velikosti roztahnou prilis tak se maji zalomit
+    na novy radek. Mezeru mezi radky lze resit
+    pridanim hodnoty do gap:10px 20px. Vychozi 
+    hodnota flex-wrap je nowrap. */
+
+    /* co udelat s tim kdyz pri hoveru se cislo posune
+    mimo radek? bud pouzit align-items: baselina, ale 
+    toto se moc nepouziva protoze to funguje jen k 
+    jedne lajne. Vic univerzalni je align-items:center.
+    Ale pokud bychom z li udelali a a tak by to byl normalni
+    odkaz s hoverem [tady sekce li:hover] a pridame normalne 
+    k odkazu border pouze transparent, ktery se 
+    pouze zabarvi pri hoveru.
+    pak se doresi kod: .velikosti li a border,padding, 
+    color:inherit, text-decoration:none, outline:none.
+    a pridat li a:focus //// outline pokud se pouziva
+    tabulator tak odebere prohlizecem pridany border pri pouzivani
+    tab.*/
 }
 li{
     padding: 3px;
@@ -130,6 +163,8 @@ li{
 li:hover{
     color: #f15f42;
     border: 1px solid #f15f42; border-radius: 50%; 
+    /* lepsi je se vyhnout opakovani, takze u border
+    neni treba mit barvu */
 }
 .akce{
     position:absolute;
@@ -143,4 +178,14 @@ a{
     padding: 10px 20px;
     background-color: #f15f42;
     border-radius: 5px;
+    /* display:inline-block Proc? aby prvek nepretejkal
+    od obsahu */
 }
+
+/* .tlacitko a:hover,
+.tlacitko a :focus{
+    background-color: x 
+}
+
+/* padding se lze napsat do .zbozi nebo jin0 nad sekci 
+ne k jednotlivym prvkum
